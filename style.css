@@ -1,3 +1,10 @@
+:root{
+    --cor1: #27ae60;
+    --cor2: #2ecc71;
+    --cor3: #ffffff;
+    --cor4: #000000;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,9 +13,10 @@ a {
     text-decoration: none;
 }
 body{
-    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
+
 }
 h1, h3 {
     font-family: 'Roboto', sans-serif;
@@ -59,7 +67,7 @@ img.responsive {
 .row:after{
     clear: both;
 }
-.col {
+.row .col {
     padding-left:   15px;
     padding-right:  15px;
 }
@@ -93,10 +101,41 @@ img.responsive {
     order: 3;
 }
 
+.row-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 2fr;
+}
+
+
+/*
+celulares ladscape (deitado)
+daqui para cima, ou seja, sem media queries seria
+um celular em portrait (em pé)
+ */
+@media (min-width: 576px) {
+
+}
+/*
+Tablets e maiores
+ */
+
+@media (min-width: 768px) {
+
+}
+/*
+monitores menores e maiores
+ */
 @media (min-width: 992px) {
-    .col{
+   .row .col{
         width: 33%;
         float: left;
     }
+
+}
+/*
+monitores maiores
+ */
+
+@media (min-width: 1200px) {
 
 }
